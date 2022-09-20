@@ -1,67 +1,103 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Invoice Form</title>
-        <link rel="stylesheet" href="styles.css">
+        <title>Invoice Table</title>
+        <style>
+            table, th, td{
+                border: 1px solid #000a14;
+            }
+
+            th{
+                height: 30px;
+            }
+
+            td{
+                height: 25px;
+                padding: 0px 15px 0px 15px;
+            }
+
+            legend{
+                font-weight: bolder;
+            }
+
+            .button{
+                background-color: darkorange;
+                padding: 10px 10px 10px 10px;
+                font-weight: bold;
+                border: none;
+                border-radius: 5px;
+                
+            }
+        </style>
     </head>
+    
     <body>
-        <div id="main" class="page-wrapper">
-            <h2>Computer Hardware Outlet</h2>
-            <h3>Invoice Form</h3>
-            
+        <div class="page-wrapper">
             <section>
                 <form action="https://www.google.com" target="_blank">
-                    <div>
+                    <div style="width: 75%; margin-left: auto; margin-right:auto;">
                         <fieldset>
                             <legend>Invoice Details</legend>
                             <div>
                                 <label>Invoice To:</label>
-                                <input type="text" name="name" maxlength="50" placeholder="Full Name" style="width: 300px;"/>
+                                <input type="text" name="name" maxlength="50" placeholder="Full Name" size="43"/>
                             </div>
                             <div>
                                 <label>Contact #:</label>
-                                <input type="text" name="number" maxlength="11"/>
+                                <input type="text" name="number" maxlength="14" placeholder="Ex. 09123456789"/>
                                 <label>Date:</label>
                                 <input type="date" name="Date"/>
-                            </div>  
+                                <label>Currency:</label>
+                                <select name="currency">
+                                    <option>--Select Currency--</option>
+                                    <option value="1">AUD</option>
+                                    <option>EUR</option>
+                                    <option>PHP</option>
+                                    <option>USD</option>
+                                </select>
+                            </div>
                         </fieldset>
-                        
-                        <table style="width:100%;">
+                    </div>
+
+                    <div style="width: 75%; margin-left: auto; margin-right:auto; overflow-x: auto;">
+                        <table style="width: 100%;">
                             <thead>
-                                <tr style="background-color:rgb(3, 3, 79); color:white;">
+                                <tr style="background-color:#000a14; color:white;">
                                     <th>Item Description</th>
                                     <th>Qty</th>
                                     <th>Unit Price</th>
                                     <th>Amount</th>
                                 </tr>
-                        
+                            </thead>
+                            <tbody>
                                 <tr>
-                                    <td><textarea name="description" rows="1" style="width: 97%;"></textarea></td>
-                                    <td><input type="number" style="width: 97%;"></td>
-                                    <td><input type="number" style="width: 97%;"></td>
-                                    <td><input type="number" style="width: 97%;"></td>
+                                    <td><textarea name="item_1" maxlength="100" rows="1"></textarea></td>
+                                    <td><input type="number"></td>
+                                    <td><input type="number"></td>
+                                    <td><input type="number"></td>
                                 </tr>
-                        
+
                                 <tr>
-                                    <td><textarea name="quantity" rows="1" style="width: 97%;"></textarea></td>
-                                    <td><input type="number" style="width: 97%;"></td>
-                                    <td><input type="number" style="width: 97%;"></td>
-                                    <td><input type="number" style="width: 97%;"></td>
+                                    <td><textarea name="item_2" maxlength="100" rows="1"></textarea></td>
+                                    <td><input type="number"></td>
+                                    <td><input type="number"></td>
+                                    <td><input type="number"></td>
                                 </tr>
+
                                 <tr>
-                                    <td><textarea name="price" rows="1" style="width: 97%;"></textarea></td>
-                                    <td><input type="number" style="width: 97%;"></td>
-                                    <td><input type="number" style="width: 97%;"></td>
-                                    <td><input type="number" style="width: 97%;"></td>
+                                    <td><textarea name="item_3" maxlength="100" rows="1"></textarea></td>
+                                    <td><input type="number"></td>
+                                    <td><input type="number"></td>
+                                    <td><input type="number"></td>
                                 </tr>
-                        
+
                                 <tr>
-                                    <td><textarea name="amount"rows="1" style="width: 97%;"></textarea></td>
-                                    <td><input type="number" style="width: 97%;"></td>
-                                    <td><input type="number" style="width: 97%;"></td>
-                                    <td><input type="number" style="width: 97%;"></td>
+                                    <td><textarea name="item_4" maxlength="100" rows="1"></textarea></td>
+                                    <td><input type="number"></td>
+                                    <td><input type="number"></td>
+                                    <td><input type="number"></td>
                                 </tr>
-                        
+                                
                                 <tr>
                                     <td colspan="3" style="text-align:right; font-weight: bold;">Sub Total</td>
                                     <td></td>
@@ -69,49 +105,48 @@
                         
                                 <tr>
                                     <td colspan="3" style="text-align:right; font-weight: bold;">VAT</td>
-                                    <td>7%</td>
+                                    <td>12%</td>
                                     
                                 </tr>
                         
                                 <tr>
-                                    <td colspan="3" style="text-align:right;font-weight: bold;" >TOTAL</th>
-                                    <td></td>
-                                </tr>
-                        
-                            </thead> 
+                                    <td colspan="3" style="text-align:right; font-weight: bolder;" >TOTAL</th>
+                                    <td style="font-weight: bolder;"></td>
+                                </tr>    
+                            </tbody> 
                         </table>
-                        
-                        <div>
-                            <fieldset>
-                                <legend>Additional Details</legend>
-                        
-                                <div>
-                                    <label>Payment Method:</label>
-                                    <select name="method">
-                                        <option>--Select Payment Method--</option>
-                                        <option value="1">Cash on Delivery</option>
-                                        <option>Credit Card</option>
-                                        <option>GCash</option>
-                                        <option>Paypal</option>
-                                    </select>
-                                </div>
-                        
-                                <div>
-                                    <input id="radio_1" type="radio" name="radio_option" value="1"/>
-                                    <label for="radio_1">Home</label>
-                                    <input id="radio_2" type="radio" name="radio_option" value="2"/>
-                                    <label for="radio_2">Office</label>
-                                </div>
-                        
-                                <div>
-                                    <textarea name="address" placeholder="Delivery Address" rows="5" cols="50" maxlength="500"></textarea>
-                                </div>
-                            </fieldset>
-                                
-                                <div>
-                                    <input type="submit" value="Submit"/>
-                                </div>
-                        </div>
+                    </div>
+
+                    <div style="width: 75%; margin-left: auto; margin-right:auto;">
+                        <fieldset>
+                            <legend>Additional Details</legend>
+                    
+                            <div>
+                                <label>Payment Method:</label>
+                                <select name="method">
+                                    <option>--Select Payment Method--</option>
+                                    <option value="1">Cash on Delivery</option>
+                                    <option>Credit Card</option>
+                                    <option>GCash</option>
+                                    <option>Paypal</option>
+                                </select>
+                            </div>
+                    
+                            <div>
+                                <input id="radio_1" type="radio" name="radio_option" value="1"/>
+                                <label for="radio_1">Home</label>
+                                <input id="radio_2" type="radio" name="radio_option" value="2"/>
+                                <label for="radio_2">Office</label>
+                            </div>
+                    
+                            <div>
+                                <textarea name="address" placeholder="Delivery Address" rows="5" cols="50" maxlength="300"></textarea>
+                            </div>
+                        </fieldset>
+                            
+                            <div>
+                                <input class="button" type="submit" value="Submit"/>
+                            </div>
                     </div>
                 </form>
             </section>
