@@ -1,0 +1,152 @@
+body {
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.page-wrapper {
+    max-width: 1024px;
+    background-color: powderblue;
+    margin: 0px auto 30px auto;
+    padding: 0px 15px 15px 30px;
+}
+
+header {
+    height: 50px;
+    width: 100%;
+    background-color: #009dff;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+}
+
+.banner {
+    height: 400px;
+    /*background-color: #000a14;*/ 
+    background-image: url("../images/moon.avif");
+    background-size: cover;
+    background-position: center;
+}
+
+h1 {
+    color: aliceblue;
+    text-align: center;
+    padding-top: 60px;
+    font-size: 46px;
+}
+
+h2 {
+    color: aliceblue;
+    text-align: center;
+    font-size: 32px;
+}
+
+section.about-me {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.about-me p {
+    font-size: 18px;
+    line-height: 38px;
+    text-align: justify;
+}
+
+section.my-portfolio div{
+    background-color: #999;
+    border: 1px solid #000;
+}
+
+.d-none {
+    display: none;
+}
+
+.d-inline {
+    display: inline;
+    background-color: aqua;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.d-inline.d2 {  /*specific class to apply an attribute*/
+    width: 300px;
+    display: inline-block;
+    background-color: red;
+}
+
+.d-none, .d-inline{ /*apply attribute to all class*/
+    font-size: 16px;
+}
+
+section .d-inline{  /*applyan lahat ng d-inline sa lahat ng section*/
+    color: yellow;
+}
+
+section>.d-inline{  /*">" means next is to... (next line lang applyan sa loob ng section)*/
+    color: green;
+}
+
+section>div>.d-inline{ /*setting specific class want to apply the attribute*/
+    color: violet;
+}
+
+.with-direction{
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.with-direction>div {
+    height: 40px;
+    /*width: 300px;*/
+    text-align: center;
+}
+
+.d12{
+    order: 5;
+    flex-grow: 1;
+}
+.d13{
+    order: 1;
+    flex-grow: 1;
+}
+.d14{
+    order: 2;
+    flex-grow: 2;
+}
+.d15{
+    order: 4;
+    flex-grow: 1;
+}
+.d16{
+    order: 3;
+    flex-grow: 3;
+}
+
+section.my-portfolio div.d-flex{
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: none;
+    border: none;
+    padding: 15px;
+}
+
+.d-flex>.d-inline{
+    display: inline-block;
+    width: 150px;
+    padding: 15px;
+    margin: 15px;
+    color: #000;
+    background-color: #fff;
+    box-shadow: 5px 10px #ccc;
+    border-radius: 4px;
+}
+
+section.my-portfolio .d-flex h4{
+    min-height: 60px;
+}
+
+section.myportfolio .d-flex p{
+    font-size: 14px;
+}
+
