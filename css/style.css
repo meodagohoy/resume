@@ -18,11 +18,10 @@ header {
     position: fixed;
     left: 0px;
     top: 0px;
-}*/
+}
 
 .banner {
     height: 400px;
-    /*background-color: #000a14;*/ 
     background-image: url("../images/computer.jpg");
     background-size: cover;
     background-position: bottom;
@@ -99,7 +98,6 @@ section>div>.d-inline{
 
 .with-direction>div {
     height: 40px;
-    /*width: 300px;*/
     text-align: center;
 }
 
