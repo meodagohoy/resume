@@ -1,0 +1,46 @@
+.page-wrapper{
+    background-color: #000c14;
+}
+
+.carousel-item img{
+    background-position: center;
+    background-repeat: no-repeat;
+    width: auto;
+    height: 100vh;
+    filter: brightness(80%);
+}
+
+.box{
+    width: 100%;
+    padding: 25px;
+}
+
+.box p{
+    text-align: justify;
+}
+
+.container>a{
+    margin-left: 20px;
+    font-weight: bold;
+    color: blanchedalmond;
+}
+
+.container-fluid>img{
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+h3{
+    color: aliceblue;
+    margin-left: 20px;
+    padding: 10px;
+}
+
+
+footer>.container-fluid{
+    text-align: center;
+    color: white;
+    background-color: rgba(47, 42, 42, 0.925);
+    padding-bottom: 5px;
+    padding-top: 10px;
+}
