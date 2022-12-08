@@ -1,10 +1,43 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Intro To JavaScript</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-    </head>
-    <body>
-        
-    </body>
+
+<head>
+    <title>Javascript Exercise 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body>
+    <h2>Machine Problem 1</h2>
+    <input type="number" id="num" value="" placeholder="Input Number" />
+    <button onclick="check()">Check</button>
+    <div id="result1"></div>
+
+    <h2>Machine Problem 2</h2>
+    <input type="text" id="char" value="" placeholder="Input Letter" maxlength="1" />
+    <button onclick="identify()">Check</button>
+    <div id="result2"></div>
+
+    <script>
+        function check() {
+            let value1 = parseInt(document.getElementById("num").value);
+
+            if (value1 % 2 == 0) {
+                document.getElementById("result1").innerHTML = value1 + " is EVEN";
+            } else {
+                document.getElementById("result1").innerHTML = value1 + " is ODD";
+            }
+        }
+
+        function identify() {
+            let value2 = (document.getElementById('char').value);
+
+            if (value2 == 'a' || value2 == 'e' || value2 == 'i' || value2 == 'o' || value2 == 'u' || value2 == 'A' || value2 == 'E' || value2 == 'I' || value2 == 'O' || value2 == 'U'){
+                document.getElementById('result2').innerHTML = value2 + " is a Vowel";
+            } else {
+                document.getElementById('result2').innerHTML = value2 + " is a Consonant";
+            }
+        }
+    </script>
+</body>
+
 </html>

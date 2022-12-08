@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript Exercise 2</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="css/bootstrap.min.css" rel="stylesheet"/>   
+        <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+        <script type="text/javascript" src="/html-css/js/jscripts.js"></script>
+    </head>
+
+    <body>
+        <h2>Machine Problem 1</h2>
+    
+        <input type="text" id="char" value="" placeholder="Input Letter" maxlength="1" onkeyup="checkVowelOrConsonant()"/>
+        <div id="result"></div>
+
+        <h2>Machine Problem 2</h2>
+        <input type="number" name="first_number" value="" placeholder="Input first number"/>
+        <input type="number" name="second_number" value="" placeholder="Input second number"/>
+
+        <button class="button" id="plus" data-operator="+" onclick="doComputeValue(event)">+</button>
+        <button class="button" id="minus" data-operator="-" onclick="doComputeValue(event)">-</button>
+        <button class="button" id="multiply" data-operator="*" onclick="doComputeValue(event)">*</button>
+        <button class="button" id="divide" data-operator="/" onclick="doComputeValue(event)">/</button>
+        <button class="button" id="equal" data-operator="=" onclick="doComputeValue(event)">=</button>
+
+        <div id="result1"></div>
+
+        <script>
+            function checkVowelOrConsonant(){
+                let letter = document.getElementById("char").value;
+                document.getElementById("result").innerHTML = letter + " is" + checkAlphabetVowelOrConsonant(letter);
+            }
+
+            function doComputeValue(e){
+                
+                let operator = e.currentTarget.getAttribute("data-operator");
+                let value1 = parseInt(document.getElementsByName("first_number")[0].value);
+                let value2 = parseInt(document.getElementsByName("second_number")[0].value);
+
+                switch(operator){
+                    case "+":
+                        document.getElementById("result1").innerHTML = value1 + value2;
+                        break;
+                    case "-":
+                        document.getElementById("result1").innerHTML = value1 - value2;
+                        break;
+                    case "*":
+                        document.getElementById("result1").innerHTML = value1 * value2;
+                        break;
+                    case "/":
+                        document.getElementById("result1").innerHTML = value1 / value2;
+                        break;
+                    default:
+                        document.getElementById("result1").innerHTML = "Unknown operation";
+                        break;
+                }
+            }
+
+            function getWeekDayName(e){
+                let date = new Date(e.currentTarget.value);
+                let day = date.getDay();
+
+                switch(day){
+                    case 0:
+                        document.getElementById("result6").innerHTML = "January";
+                        break;
+                    case 1: 
+                        document.getElementById("result6").innerHTML = "February";
+                        break;
+                    case 2: 
+                        document.getElementById("result6").innerHTML = "March";
+                        break;
+                    case 3: 
+                        document.getElementById("result6").innerHTML = "April";
+                        break;
+                    case 4: 
+                        document.getElementById("result6").innerHTML = "May";
+                        break;
+                    case 5: 
+                        document.getElementById("result6").innerHTML = "June";
+                        break;
+                    case 6: 
+                        document.getElementById("result6").innerHTML = "July";
+                        break;
+                    default:
+                        document.getElementById("result6").innerHTML = "";
+                        break;
+                }
+            }
+        </script>
+    </body>
+</html>
