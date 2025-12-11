@@ -1,8 +1,7 @@
-.container 
-{
+.container {
     display: flex;
     flex-direction: column;
-    margin: 50px;
+    margin: 100px;
     padding: 50px;
     font-family: Arial, Helvetica, sans-serif;
     border: 1px #c7bcbc;
@@ -10,38 +9,50 @@
     background-color: #fff;
 }
 
-.profile 
-{
+.profile {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
-#name
-{
+
+#name {
     font-size: 40px;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
-a 
-{
+section h3 {
+    border-bottom: 2px solid #000;
+    padding-bottom: 5px;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+a {
     text-decoration: none;
     color: black;
 }
 
-a:hover 
-{
+a:hover {
     color: #0816db;
 }
 
-.summary>p, .summary>h4, .skills>ul, .skills>h4, .experience>p, .experience>ul, .experience>h4, .education>p, .education>h4, .certifications>p, .certifications>h4, .projects>p, .projects>h4
-{
-    padding: 0px 100px ;
+.summary>p, 
+.skills>ul,
+.experience>h4,
+.experience>p, 
+.experience>ul,
+.education>h4,
+.education>p,
+.certifications>h4,
+.certifications>p,
+.projects>h4,
+.projects>p,
+.references>p {
+    padding: 0px 150px;
     text-align: justify;
-    margin-bottom: 50px;
 }
 
-footer 
-{
+footer {
     text-align: center;
     font-size: 0.9rem;
     color: #777;
