@@ -1,7 +1,7 @@
 .container {
     display: flex;
     flex-direction: column;
-    margin: 100px;
+    margin: 75px 100px 100px;
     padding: 50px;
     font-family: Arial, Helvetica, sans-serif;
     border: 1px #c7bcbc;
@@ -20,20 +20,20 @@
     margin-bottom: 10px;
 }
 
-section h3 {
-    border-bottom: 2px solid #000;
-    padding-bottom: 5px;
-    margin-bottom: 30px;
-    font-size: 24px;
-}
-
 a {
     text-decoration: none;
     color: black;
 }
 
-a:hover {
-    color: #0816db;
+a:hover { color: #128ee0; }
+
+section {
+    margin-bottom: 50px;
+}
+
+h3 {
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ccc;
 }
 
 .summary>p, 
@@ -48,7 +48,7 @@ a:hover {
 .projects>h4,
 .projects>p,
 .references>p {
-    padding: 0px 150px;
+    padding-left: 100px;
     text-align: justify;
 }
 
@@ -58,3 +58,25 @@ footer {
     color: #777;
     margin-top: 20px;
 }
+
+@media (max-width: 768px) {
+    .container {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .summary>p, 
+    .skills>ul,
+    .experience>h4,
+    .experience>p, 
+    .experience>ul,
+    .education>h4,
+    .education>p,
+    .certifications>h4,
+    .certifications>p,
+    .projects>h4,
+    .projects>p,
+    .references>p {
+        padding-left: 20px;
+    }
+} 
