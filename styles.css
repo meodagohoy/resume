@@ -49,6 +49,7 @@ h3 {
 .projects>p,
 .references>p {
     padding-left: 100px;
+    text-align: justify;
 }
 
 footer {
