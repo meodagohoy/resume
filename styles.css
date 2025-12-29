@@ -87,4 +87,12 @@ footer {
     .references>p {
         padding-left: 20px;
     }
-} 
+
+    footer {
+        flex-wrap: nowrap;
+        text-align: center;
+        font-size: 0.8rem;
+        color: #777;
+        margin-top: 20px;
+    }
+}   
