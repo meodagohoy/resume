@@ -60,6 +60,12 @@ h3 {
     text-align: justify;
 }
 
+.certifications>p.issuedBy {
+    font-size: 0.9rem;
+    padding-left: 100px;
+    text-align: justify;
+}
+
 footer {
     text-align: center;
     font-size: 0.8rem;
