@@ -1,42 +1,49 @@
-.container {
+.main-container {
     display: flex;
     flex-direction: column;
     margin: 75px 100px 100px;
     padding: 50px;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.05rem;
     border: 1px #c7bcbc;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-}
-
-.profile {
-    text-align: center;
-    margin-bottom: 50px;
+    background-color: #fcfcfc;
 }
 
 #name {
-    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    margin-bottom: 10px;
+    font-style: normal;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 8px;
 }
 
-.contacts {
+#title {
+    font-size: 24px;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #625a5a;
+    margin-top: 7px;
+}
+
+nav {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 20px;
     flex-wrap: wrap;
-    font-size: 14px;
+    font-size: 15px;
+    margin-bottom: 40px;
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none; 
     color: black;
 }
-
 a:hover { color: #128ee0; }
 
 section {
-    margin-bottom: 50px;
+    margin: 20px 35px;
 }
 
 h3 {
@@ -44,26 +51,53 @@ h3 {
     border-bottom: 2px solid #ccc;
 }
 
-.summary>p, 
-.skills>ul,
-.experience>h4,
-.experience>p, 
-.experience>ul,
-.education>h4,
-.education>p,
-.certifications>h4,
-.certifications>p,
-.projects>h4,
-.projects>p,
-.references>p {
+.summary>p,
+.projects>h4 {
     padding-left: 100px;
     text-align: justify;
 }
 
-.certifications>p.issuedBy {
-    font-size: 0.9rem;
+.skills>ul,
+.experience>ul,
+.projects>ul {
+    padding-left: 120px;
+    list-style-type: square;
+    text-align: justify;
+}
+
+.role, .degree {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.role> :is(h4, p),
+.degree> :is(h4, p) {
+    margin: 0%;
+    padding-left: 100px;
+}
+
+#company, #major, .issuedBy {
+    margin: 0%;
+    padding-left: 100px;
+    color: #625a5a;
+}
+
+#school {
+    padding-left: 100px;
+}
+
+.certifications>h4 {
+    padding-left: 100px;
+    margin-bottom: 5px;
+}
+
+.references>p {
     padding-left: 100px;
     text-align: justify;
+    font-style: italic;
+    font-size: 0.9rem;
 }
 
 footer {
@@ -73,24 +107,237 @@ footer {
     margin-top: 20px;
 }
 
-@media (max-width: 768px) {
-    .container {
+/* Mobile Devices */
+@media (max-width: 425px) {
+    .main-container {
         margin: 20px;
         padding: 20px;
     }
 
-    .summary>p, 
-    .skills>ul,
-    .experience>h4,
-    .experience>p, 
-    .experience>ul,
-    .education>h4,
-    .education>p,
-    .certifications>h4,
-    .certifications>p,
-    .projects>h4,
-    .projects>p,
-    .references>p {
-        padding-left: 20px;
+    #name {
+        font-size: 28px;
     }
-}   
+
+    #title {
+        font-size: 18px;
+    }
+
+    nav {
+        gap: 5px;
+        font-size: 13px;
+    }
+
+    nav>p {
+        margin: 0%;
+    }
+
+    section {
+        margin: 10px 10px;
+    }
+
+    .summary>p {
+        padding-left: 0%;
+        text-align: left;
+        font-size: 0.9rem;
+        line-height: 1.2;
+    }
+
+    .skills>ul,
+    .experience>ul,
+    .projects>ul {
+        padding-left: 20px;
+        text-align: left;
+        font-size: 0.9rem;
+        line-height: 1.2;
+    }
+
+    .role, .degree {
+        display: block;
+        margin-bottom: 10px;
+        padding-left: 0%;
+        font-size: 0.9rem;
+    }
+
+    .role> :is(h4, p),
+    .degree> :is(h4, p) {
+        margin: 5px 0;
+        padding-left: 0%;
+    }
+
+    #company, #major, #school, .issuedBy {
+        padding-left: 0%;
+        font-size: 0.9rem;
+    }
+
+    .certifications>h4,
+    .projects>h4 {
+        padding-left: 0%;
+        margin-bottom: 5px;
+        font-size: 0.9rem;
+    }
+
+    .references>p {
+        padding-left: 0%;
+        text-align: left;
+        font-style: italic;
+        font-size: 0.8rem;
+    }
+
+    footer {
+        font-size: 0.7rem;
+    }
+
+}
+
+/* Tablet Devices */
+@media (min-width: 426px) and (max-width: 768px) {
+    .main-container {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    #name {
+        font-size: 32px;
+    }
+
+    #title {
+        font-size: 20px;
+    }
+
+    nav {
+        gap: 10px;
+        font-size: 14px;
+    }
+
+    section {
+        margin: 15px 20px;
+    }
+
+    .summary>p,
+    .projects>h4 {
+        padding-left: 0%;
+        text-align: left;
+    }
+
+    .skills>ul,
+    .experience>ul,
+    .projects>ul {
+        padding-left: 20px;
+        text-align: left;
+    }
+
+    .role, .degree {
+        display: block;
+        margin-bottom: 10px;
+        padding-left: 0%;
+    }
+
+    .role> :is(h4, p),
+    .degree> :is(h4, p) {
+        margin: 5px 0;
+        padding-left: 0%;
+    }
+
+    #company, #major, #school, .issuedBy {
+        padding-left: 0%;
+    }
+
+    .certifications>h4,
+    .projects>h4 {
+        padding-left: 0%;
+        margin-bottom: 5px;
+    }
+
+    .references>p {
+        padding-left: 0%;
+        text-align: left;
+        font-style: italic;
+        font-size: 0.8rem;
+    }
+
+    footer {
+        font-size: 0.7rem;
+    }
+}
+
+/* laptop Devices */
+@media (min-width: 769px) and (max-width: 1440px) {
+    .main-container {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    #name {
+        font-size: 36px;
+    }
+
+    #title {
+        font-size: 22px;
+    }
+
+    nav {
+        gap: 15px;
+        font-size: 16px;
+    }
+
+    section {
+        margin: 20px 35px;
+    }
+
+    .summary>p,
+    .projects>h4 {
+        padding-left: 100px;
+        text-align: justify;
+    }
+
+    .skills>ul,
+    .experience>ul,
+    .projects>ul {
+        padding-left: 120px;
+        list-style-type: square;
+        text-align: justify;
+    }
+
+    .role, .degree {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 5px;
+    }
+
+    .role> :is(h4, p),
+    .degree> :is(h4, p) {
+        margin: 0%;
+        padding-left: 100px;
+    }
+
+    #company, #major, .issuedBy {
+        margin: 0%;
+        padding-left: 100px;
+        color: #625a5a;
+    }
+
+    #school {
+        padding-left: 100px;
+    }
+
+    .certifications>h4 {
+        padding-left: 100px;
+        margin-bottom: 5px;
+    }
+
+    .references>p {
+        padding-left: 100px;
+        text-align: justify;
+        font-style: italic;
+        font-size: 0.9rem;
+    }
+
+    footer {
+        text-align: center;
+        font-size: 0.8rem;
+        color: #777;
+        margin-top: 20px;
+    }
+}
+
